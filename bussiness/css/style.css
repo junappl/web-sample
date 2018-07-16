@@ -51,10 +51,61 @@ body {
     width: auto;
 }
 
+/* ヘッダー画像 */
 .topimg {
     height: auto;
     max-width: 100%;
     vertical-align: bottom;
+}
+
+/* 概要 */
+.gaiyou a {
+    background-color: #222222;
+    color: #ffffff;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.gaiyou a:hover {
+    opacity: 0.8;
+}
+
+.gaiyou i {
+    display: block;
+    font-size: 38px;
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+
+.gaiyou .fa-database {
+    background-color: #40aaef;
+}
+
+.gaiyou .fa-bar-chart-o {
+    background-color: #58be89;
+}
+
+.gaiyou .fa-envelope {
+    background-color: #f27398;
+}
+
+.gaiyou h1 {
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.gaiyou p {
+    background-color: #444444;
+    font-size: 12px;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-bottom: 15px;
+    padding-top: 15px;
 }
 
 /* お知らせ */
@@ -193,7 +244,7 @@ body {
 }
 
 /* ボックスの左右 */
-.boxA, .box4, .box5 {
+.boxA, .box4, .box5, .box6 {
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -211,6 +262,14 @@ body {
 
 .box4-1 {
     padding-bottom: 20px;
+}
+
+.box6 {
+    padding-top: 20px;
+}
+
+.box6-1, .box6-2, .box6-3 {
+    padding-bottom: 10px;
 }
 
 /* ########## 599px以上 ########## */
@@ -260,13 +319,37 @@ body {
         float: left;
         width: 30%;
     }
+
+    /* BOX6-1、BOX6-2、BOX6-3を横に並べる設定 */
+    .box6::after {
+        clear: both;
+        content: "";
+        display: block;
+    }
+
+    .box6-1 {
+        float: left;
+        margin-right: 2%;
+        width: 32%;
+    }
+
+    .box6-2 {
+        float: left;
+        margin-right: 2%;
+        width: 32%;
+    }
+
+    .box6-3 {
+        float: left;
+        width: 32%;
+    }
 }
 
 /* ########## 1190px以上 ########## */
 @media (min-width: 1190px) {
     
     /* 全体の横幅を固定 */
-    .box3, .box4, .boxA-inner, .box5-inner {
+    .box3, .box4, .boxA-inner, .box5-inner, .box6 {
         margin-left: auto;
         margin-right: auto;
         width: 1140px;
