@@ -7,19 +7,35 @@
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css">
+
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script>
+        $(function() {
+
+           $("#menubtn").click(function() {
+               $("#menu").slideToggle();
+           });
+
+        });
+    </script>
 </head>
 
 <body>
-    <div class="boxA">
-        <div class="boxA-inner">
-            <div class="box1">
+    <header class="header">
+        <div class="header-inner">
+            <div class="header-site">
                 <div class="site">
                     <h1><a href="#"><img src="img/Logo@10x.png" alt="SpeeQii" width="152" height="42"></a></h1>
                 </div>
             </div>
         
-            <div class="box2">
-                <nav class="menu">
+            <div class="header-nav">
+
+                <button type="button" id="menubtn">
+                    <i class="fa fa-bars"></i><span>MENU</span>
+                </button>
+
+                <nav class="menu" id="menu">
                     <ul>
                         <li><a href="#">トップ</a></li>
                         <li><a href="#">沿革</a></li>
@@ -30,9 +46,9 @@
                 </nav>
             </div>
         </div>
-    </div>
+    </header>
 
-    <div class="box3">
+    <div class="photo">
         <div class="top">
             <img src="img/PAK86_seisakudb20140517.jpg" alt="" class="topimg">
             <p class="catch">SpeeQiiは、Qiitaの記事を<br>
@@ -40,8 +56,8 @@
         </div>
     </div>
 
-    <div class="box6">
-        <div class="box6-1">
+    <div class="pickup">
+        <div class="pickup-1">
             <div class="gaiyou">
                 <a href="#">
                     <i class="fa fa-database"></i>
@@ -51,7 +67,7 @@
                 </a>
             </div>
         </div>
-        <div class="box6-2">
+        <div class="pickup-2">
             <div class="gaiyou">
                 <a href="#">
                     <i class="fa fa-bar-chart-o"></i>
@@ -61,7 +77,7 @@
                 </a>
             </div>
         </div>
-        <div class="box6-3">
+        <div class="pickup-3">
             <div class="gaiyou">
                 <a href="#">
                     <i class="fa fa-envelope"></i>
@@ -73,8 +89,8 @@
         </div>
     </div>
 
-    <div class="box4">
-        <div class="box4-1">
+    <div class="info">
+        <div class="info-main">
             <div class="news">
                 <h1>お知らせ</h1>
                 <ul>
@@ -97,7 +113,7 @@
                 </ul>
             </div>
         </div>
-        <div class="box4-2">
+        <div class="info-sub">
             <div class="follow">
 
                 <p class="follow-info">最新情報はこちらでも配信しています。</p>
@@ -120,13 +136,13 @@
         </div>
     </div>
 
-    <div class="box5">
-        <div class="box5-inner">
+    <footer class="footer">
+        <div class="footer-inner">
             <div class="copyright">
                 <p>Copyright &copy; junappl</p>
             </div>
         </div>
-    </div>
+    </footer>
 </body>
 
 </html>
